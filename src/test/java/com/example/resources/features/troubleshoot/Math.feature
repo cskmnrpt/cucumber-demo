@@ -1,5 +1,6 @@
 Feature: Math verification
 
+  @zaid
   Scenario Outline: Verify addition works
     Given I have numbers <a> and <b>
     When I add them
