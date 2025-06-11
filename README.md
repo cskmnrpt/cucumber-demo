@@ -3,30 +3,29 @@
 1. [Syntax Examples](syntax-examples)
 2. [Frequently asked Questions](frequently-asked-questions)
 
-
 ---
 
 ### Syntax Examples
-This is an example repository with tests in the `src/test/java` directory. To run the tests :
+This is an example repository with tests in the `src/test/java` directory. To run the tests:
 
 1. Clone the repository with `git clone https://github.com/cskmnrpt/qase-cucumber.git`.
 
-   To clone a different branch, other than `main`, use this command - 
+   To clone a different branch, other than `main`, use this command:  
    `git clone --single-branch --branch <branch-name> https://github.com/cskmnrpt/qase-cucumber.git`.
 
 2. Create a `qase.config.json` in the root of the repository, and add your token, and project code.
 
 3. Run `QASE_MODE=testops mvn clean test`.
 
-
 ---
+
 ## Purpose of this branch
-#### To check the behavior of Qase.comment() method
+#### To check the behavior of `Qase.comment()` method
 
 ### Observation
-Please open the file `src/test/java/com/example/stepdefinitions/MathSteps.java` to check. 
+Please open the file [`MathSteps.java`](https://github.com/cskmnrpt/cucumber-demo/blob/cucumberv7-comment-behaviour/src/test/java/com/example/stepdefinitions/MathSteps.java) to check.
 
-In case of failed test: 
+In case of a failed test:
 
-- If added after the assertion, the comment gets ignored. 
-- If added before the assertion, the comment gets published along with the assertion error message.
+- If added **after** the assertion, the comment gets ignored.  
+- If added **before** the assertion, the comment gets published along with the assertion error message.
