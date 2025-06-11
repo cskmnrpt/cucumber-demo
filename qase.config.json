@@ -1,6 +1,6 @@
 {
   "mode": "testops",
-  "fallback": "off",
+  "fallback": "report",
   "debug": true,
   "report": {
     "driver": "local",
@@ -13,7 +13,7 @@
   },
   "testops": {
     "api": {
-      "token": "<token>",
+      "token": "",
       "host": "qase.io"
     },
     "run": {
@@ -22,10 +22,10 @@
       "complete": true
     },
     "defect": false,
-    "project": "<project code>",
+    "project": "",
     "batch": {
       "size": 200
     },
-    "useV2": false
+    "useV2": true
   }
 }

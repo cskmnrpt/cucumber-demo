@@ -1,31 +1,32 @@
-# Cucumber7-Maven Example
+# qase-cucumber7
+> To view other cucumber versions, check [here](https://github.com/cskmnrpt/qase-cucumber/branches/all?query=cucumber).
+1. [Syntax Examples](syntax-examples)
+2. [Frequently asked Questions](frequently-asked-questions)
 
-This is a sample project demonstrating how to write and execute tests using the Cucumber 7 framework with Maven.
 
-## Prerequisites
+---
 
-Ensure that the following tools are installed on your machine:
+### Syntax Examples
+This is an example repository with tests in the `src/test/java` directory. To run the tests :
 
-1. [Java 8](https://www.oracle.com/java/technologies/javase/javase8-archive-downloads.html)
-2. [Maven](https://maven.apache.org/download.cgi)
+1. Clone the repository with `git clone https://github.com/cskmnrpt/qase-cucumber.git`.
 
-## Setup Instructions
+   To clone a different branch, other than `main`, use this command - 
+   `git clone --single-branch --branch <branch-name> https://github.com/cskmnrpt/qase-cucumber.git`.
 
-1. Clone this repository by running the following command:
-   ```bash
-   git clone https://github.com/qase-tms/qase-java.git
-   cd qase-java/examples/cucumber7/cucumber7-maven
-   ```
+2. Create a `qase.config.json` in the root of the repository, and add your token, and project code.
 
-2. Create a `qase.config.json` file in the root of the project. You can follow the instructions
-   on [how to configure the file](https://github.com/qase-tms/qase-java/tree/main/qase-java-commons#readme).
+3. Run `QASE_MODE=testops mvn clean test`.
 
-3. Once the configuration is done, run the tests and upload the results to Qase by executing:
-   ```bash
-   mvn clean test
-   ```
 
-## Additional Resources
+---
+## Purpose of this branch
+#### To check the behavior of Qase.comment() method
 
-For more details on how to use this integration with Qase Test Management, visit
-the [Qase Java documentation](https://github.com/qase-tms/qase-java).
+### Observation
+Please open the file `src/test/java/com/example/stepdefinitions/MathSteps.java` to check. 
+
+In case of failed test: 
+
+- If added after the assertion, the comment gets ignored. 
+- If added before the assertion, the comment gets published along with the assertion error message.
